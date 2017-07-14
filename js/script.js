@@ -3,7 +3,7 @@ $(document).ready(function(){
     const section = $('#calendar');
     const button = $('button');
     button.on('click', function(){
-        section.empty();
+
         let firstDate = '';
         let secondDate = '';
         const begin = $('#firstDate input');
@@ -25,6 +25,7 @@ $(document).ready(function(){
             method: 'GET'
         }).done(function(response){
             console.log(response);
+            section.empty();
             $(response).find('event').each(function() {
                 const date = $(this).find("date").text().split('/');
                 const year = $('<div>', {class:'year'}).text(date[0]);
