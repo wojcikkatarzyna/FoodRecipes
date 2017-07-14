@@ -1,4 +1,4 @@
-#callendar{
+#calendar{
     font-family: 'Fredericka the Great', cursive;
     background: url('../images/clock.jpg');
     background-size: contain;
@@ -6,6 +6,8 @@
     background-position: center;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    min-height: 500px;
     .event{
         border: 2px double rgb(116, 88, 17);
         box-shadow: 5px 5px 15px #bd900b;

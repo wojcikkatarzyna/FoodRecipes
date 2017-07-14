@@ -1,13 +1,29 @@
 $(document).ready(function(){
 
-    function loadFacts() {
+    const button = $('button');
+    button.on('click', function(){
+        let firstDate = '';
+        let secondDate = '';
+        const begin = $('#firstDate input');
+        for (let i=0; i<begin.length; i++) {
+            firstDate += begin[i].value;
+        }
+        const end = $('#secondDate input');
+        for (let i=0; i<end.length; i++) {
+            secondDate += end[i].value;
+        }
+        let urlAPI = 'http://www.vizgr.org/historical-events/search.php?begin_date='+firstDate+'&end_date='+secondDate;
+        loadFacts(urlAPI);
+    });
+
+    function loadFacts(userURL) {
         $.ajax({
-            url: 'http://www.vizgr.org/historical-events/search.php?begin_date=20010911&end_date=20010918',
+            url: userURL,
             method: 'GET'
         }).done(function(response){
             console.log(response);
             $(response).find('event').each(function() {
-                const section = $('#callendar');
+                const section = $('#calendar');
                 const date = $(this).find("date").text().split('/');
                 const year = $('<div>', {class:'year'}).text(date[0]);
                 const month = $('<div>', {class:'month'});
@@ -78,8 +94,5 @@ $(document).ready(function(){
             console.log(error);
         })
     }
-    loadFacts();
-
-
 
 })
