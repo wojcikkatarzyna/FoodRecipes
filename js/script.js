@@ -3,7 +3,7 @@ $(document).ready(function(){
     const section = $('#calendar');
     const button = $('button');
     button.on('click', function(){
-        //section.empty();
+        section.empty();
         let firstDate = '';
         let secondDate = '';
         const begin = $('#firstDate input');
