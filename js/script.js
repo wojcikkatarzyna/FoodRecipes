@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
+    const section = $('#calendar');
     const button = $('button');
     button.on('click', function(){
+        //section.empty();
         let firstDate = '';
         let secondDate = '';
         const begin = $('#firstDate input');
@@ -12,12 +14,12 @@ $(document).ready(function(){
         for (let i=0; i<end.length; i++) {
             secondDate += end[i].value;
         }
-        let urlAPI = 'http://www.vizgr.org/historical-events/search.php?begin_date='+firstDate+'&end_date='+secondDate;
+        let urlAPI = 'https://cors-anywhere.herokuapp.com/http://www.vizgr.org/historical-events/search.php?begin_date='+firstDate+'&end_date='+secondDate;
+        console.log(urlAPI);
         loadFacts(urlAPI);
     });
 
     function loadFacts(userURL) {
-        const section = $('#calendar');
         $.ajax({
             url: userURL,
             method: 'GET'
@@ -82,7 +84,6 @@ $(document).ready(function(){
                 const eventDiv = $('<div>', {class:'event'});
                 const dateDiv = $('<div>', {class:'date'});
                 const infoDiv = $('<div>', {class:'description'});
-                section.empty();
                 dateDiv.append(year);
                 dateDiv.append(day);
                 dateDiv.append(month);
@@ -90,9 +91,9 @@ $(document).ready(function(){
                 eventDiv.append(dateDiv);
                 eventDiv.append(infoDiv);
                 section.append(eventDiv);
+                console.log($(this));
             });
         }).fail(function(error){
-            section.empty();
             const errorDiv = $('<div>', {class:'error'});
             errorDiv.text('Sorry, try with another dates');
             section.append(errorDiv);
