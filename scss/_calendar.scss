@@ -8,6 +8,10 @@
     flex-wrap: wrap;
     justify-content: center;
     min-height: 500px;
+    .error{
+        color: white;
+        font-size: 35px;
+    }
     .event{
         border: 2px double rgb(116, 88, 17);
         box-shadow: 5px 5px 15px #bd900b;

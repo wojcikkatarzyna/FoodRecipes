@@ -17,13 +17,13 @@ $(document).ready(function(){
     });
 
     function loadFacts(userURL) {
+        const section = $('#calendar');
         $.ajax({
             url: userURL,
             method: 'GET'
         }).done(function(response){
             console.log(response);
             $(response).find('event').each(function() {
-                const section = $('#calendar');
                 const date = $(this).find("date").text().split('/');
                 const year = $('<div>', {class:'year'}).text(date[0]);
                 const month = $('<div>', {class:'month'});
@@ -82,6 +82,7 @@ $(document).ready(function(){
                 const eventDiv = $('<div>', {class:'event'});
                 const dateDiv = $('<div>', {class:'date'});
                 const infoDiv = $('<div>', {class:'description'});
+                section.empty();
                 dateDiv.append(year);
                 dateDiv.append(day);
                 dateDiv.append(month);
@@ -91,7 +92,10 @@ $(document).ready(function(){
                 section.append(eventDiv);
             });
         }).fail(function(error){
-            console.log(error);
+            section.empty();
+            const errorDiv = $('<div>', {class:'error'});
+            errorDiv.text('Sorry, try with another dates');
+            section.append(errorDiv);
         })
     }
 

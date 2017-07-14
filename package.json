@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wojcikkatarzyna/HistoricalFacts.git"
+    "url": "git+https://github.com/wojcikkatarzyna/PageFromCalendar.git"
   },
   "author": "kasia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wojcikkatarzyna/HistoricalFacts/issues"
+    "url": "https://github.com/wojcikkatarzyna/PageFromCalendar/issues"
   },
-  "homepage": "https://github.com/wojcikkatarzyna/HistoricalFacts#readme",
+  "homepage": "https://github.com/wojcikkatarzyna/PageFromCalendar#readme",
   "devDependencies": {
     "gulp-autoprefixer": "^4.0.0",
     "gulp-livereload": "^3.8.1",
