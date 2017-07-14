@@ -24,8 +24,8 @@ $(document).ready(function(){
             url: userURL,
             method: 'GET'
         }).done(function(response){
-            console.log(response);
             section.empty();
+            console.log(response);
             $(response).find('event').each(function() {
                 const date = $(this).find("date").text().split('/');
                 const year = $('<div>', {class:'year'}).text(date[0]);
