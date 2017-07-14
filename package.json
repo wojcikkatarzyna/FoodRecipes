@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wojcikkatarzyna/FoodRecipes.git"
+    "url": "git+https://github.com/wojcikkatarzyna/HistoricalFacts.git"
   },
   "author": "kasia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wojcikkatarzyna/FoodRecipes/issues"
+    "url": "https://github.com/wojcikkatarzyna/HistoricalFacts/issues"
   },
-  "homepage": "https://github.com/wojcikkatarzyna/FoodRecipes#readme",
+  "homepage": "https://github.com/wojcikkatarzyna/HistoricalFacts#readme",
   "devDependencies": {
     "gulp-autoprefixer": "^4.0.0",
     "gulp-livereload": "^3.8.1",
