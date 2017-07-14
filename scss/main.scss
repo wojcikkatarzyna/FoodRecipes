@@ -1,45 +1,8 @@
 @import "reset";
+@import "header";
+@import "callendar";
+@import "footer";
 
-#historicalFacts{
-    font-family: 'Fredericka the Great', cursive;
-    height: 500px;
-    width: 300px;
-
-
-    .event{
-        border: 2px double rgb(116, 88, 17);
-        box-shadow: 5px 5px 15px #bd900b;
-        background: url('../images/paper.jpg');
-        background-size: cover;
-        width: 300px;
-        min-height: 400px;
-        margin: 25px;
-        .date{
-            font-size: 30px;
-            height: 200px;
-            text-align: center;
-            padding: 15px;
-            .year{
-                font-size: 25px;
-                font-weight: bold;
-            }
-            .month{
-                font-size: 25px;
-                font-weight: bold;
-            }
-            .day{
-                font-size: 75px;
-                font-weight: bold;
-                padding: 15px 0;
-            }
-        }
-        .description{
-            min-height: 300px;
-            text-align: center;
-            font-size: 15px;
-            margin: 0 15px;
-            padding: 15px 0;
-            border-top: 2px solid black;
-        }
-    }
+body{
+  background-color: black;
 }

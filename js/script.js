@@ -7,7 +7,7 @@ $(document).ready(function(){
         }).done(function(response){
             console.log(response);
             $(response).find('event').each(function() {
-                const section = $('#historicalFacts');
+                const section = $('#callendar');
                 const date = $(this).find("date").text().split('/');
                 const year = $('<div>', {class:'year'}).text(date[0]);
                 const month = $('<div>', {class:'month'});
