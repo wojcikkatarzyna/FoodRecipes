@@ -42,7 +42,7 @@ $(document).ready(function(){
             section.empty();
             console.log(response);
             if (response === 'No events found for this query.') {
-                const noData = $('<div>', {class:'error'}).text('Sorry, there is no events for choosen dates. Try with another period of time.');
+                const noData = $('<div>', {class:'error'}).text('Sorry, no events for chosen dates. Try with another period of time.');
                 section.append(noData);
             } else {
               $(response).find('event').each(function() {
