@@ -28,7 +28,6 @@ $(document).ready(function(){
               secondDate += end[i].value;
           }
           let urlAPI = 'https://cors-anywhere.herokuapp.com/http://www.vizgr.org/historical-events/search.php?begin_date='+firstDate+'&end_date='+secondDate;
-          console.log(urlAPI);
           loadFacts(urlAPI);
         }
 
@@ -40,7 +39,6 @@ $(document).ready(function(){
             method: 'GET'
         }).done(function(response){
             section.empty();
-            console.log(response);
             if (response === 'No events found for this query.') {
                 const noData = $('<div>', {class:'error'}).text('Sorry, no events for chosen dates. Try with another period of time.');
                 section.append(noData);

@@ -1,7 +1,7 @@
 {
   "name": "config",
   "version": "1.0.0",
-  "description": "basic setup for SASS",
+  "description": "This web site show historical events / facts as a page from calendar.\r Font: 'Fredericka the Great' from https://fonts.google.com.\r Technologies: HTML, SASS, Gulp, jQuery, AJAX.\r Data are from API: http://www.vizgr.org/historical-events/.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/wojcikkatarzyna/PageFromCalendar#readme",
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^3.1.0",
